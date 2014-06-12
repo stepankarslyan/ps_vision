@@ -11,9 +11,10 @@ app.use(express.static(__dirname + "/public"));
 app.use('/lib', express.static(__dirname + "/bower_components"));
 app.use(bodyParser());
 
-app.delete("/process/:pid", function(req, res) {
+app.delete("/processes/:pid", function(req, res) {
   res.send("Process was killed");
 });
+
 app.get("/processes", function(req, res) {
   
   var processes = [

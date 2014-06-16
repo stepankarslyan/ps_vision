@@ -5,6 +5,7 @@
     "express": "*",
     "body-parser": "*",
     "underscore": "*",
-    "optimist":"*"
+    "optimist":"*",
+    "zmq":"onicollet/zmq"
   }
 }

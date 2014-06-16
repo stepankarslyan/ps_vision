@@ -8,14 +8,13 @@ angular.module("MyApp").
     method: "GET",
     
     success: function(data) {
-      $scope.processes = data;
+      $scope.processes = JSON.parse(data);
       $scope.$apply();
     }
     
   });
   
   $scope.kill = function(proc) {
-    $scope.alert = null;
     
     $.ajax({
       url: "/processes/" + proc.pid,
